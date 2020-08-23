@@ -1,0 +1,26 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+if __name__ == '__main__':
+    n = int(input())
+    cnt = 0
+    consecutiveCnt = 0
+    r = 0
+    while n != 0:
+        r = n%2
+        if r == 1:
+            cnt = cnt + 1
+        else:
+            cnt = 0
+        consecutiveCnt = max(consecutiveCnt, cnt)
+        n = (int)(n/2)
+        #print(n)
+
+    print(consecutiveCnt)

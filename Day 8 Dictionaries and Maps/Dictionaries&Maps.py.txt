@@ -1,0 +1,21 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+n = int(input()) #no. of inputs typecasted to integer
+phBook = dict()
+
+for i in range(n):
+    namePhNo = input()
+    keyValue = namePhNo.split()
+    #print(keyValue[0]," ",keyValue[1])
+    #put in Dict phBook
+    phBook[keyValue[0]] = keyValue[1]
+#print(phBook)
+
+while True:
+    try:
+        name = input()
+    except:
+        break
+    if name not in phBook.keys():
+        print("Not found")
+    else:
+        print(f"{name}={phBook[name]}")
